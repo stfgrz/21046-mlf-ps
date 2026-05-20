@@ -1,18 +1,17 @@
 # 21046 — Data Science and Machine Learning for Finance
 **Graduate Takehome Assignment (Group 12 Submission) — A.Y. 2025/2026**  
-**Institution:** Università Bocconi, Milan, Italy  
 **Course Director:** Prof. Francesco Corielli  
 
 ---
 
-## 📖 Executive Summary
+## Executive Summary
 This repository contains the group assignment (takehome project) for the **21046 Data Science and Machine Learning for Finance** course. The project applies statistical modeling, classical machine learning, and deep learning techniques to two core quantitative finance problems:
 1. **Question 1 — Statistical Return Analysis & Median-MAD Portfolio Optimization:** A rigorous evaluation of S&P 500 stock return properties, dimensionality reduction (PCA and Keras autoencoders), and a comparison of linear proxy vs. non-convex, multi-start exact optimization algorithms for Median-MAD portfolios.
 2. **Question 2 — Option Delta Hedging with Machine Learning & Deep Learning:** Modeling and approximating option hedge ratios (Delta) for CME E-Mini S&P 500 futures options. It compares linear baselines (Ridge/Lasso), tree-based ensembles (Random Forest, Gradient Boosting), and Deep Neural Networks (raw MLPs, Residual NNs) against analytical Black 76 benchmarks under a **Self-Financing Replication Test**.
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 *   [src/21046_group12_submission.ipynb](file:///Users/stefanograziosi/Documents/GitHub/21046-mlf-ps/src/21046_group12_submission.ipynb): Main Jupyter Notebook containing the data pipelines, model definitions, training loops, evaluation grids, and visualizations.
 *   [data/](file:///Users/stefanograziosi/Documents/GitHub/21046-mlf-ps/data): Directory containing raw and diagnostic data.
@@ -26,7 +25,7 @@ This repository contains the group assignment (takehome project) for the **21046
 
 ---
 
-## ⚙️ Installation & Getting Started
+## Installation & Getting Started
 
 ### Prerequisites
 *   Python 3.10+
@@ -52,7 +51,7 @@ Open [src/21046_group12_submission.ipynb](file:///Users/stefanograziosi/Document
 
 ---
 
-## 📈 Question 1 — Statistical Analysis & Median-MAD Portfolio Optimization
+## Question 1 — Statistical Analysis & Median-MAD Portfolio Optimization
 
 ### 1. Data Pipeline & Survivorship Bias
 The code downloads S&P 500 constituents prices over a 10-year historical window. Dropping stocks with missing values leaves **461 out of 500 companies**. 
@@ -112,7 +111,7 @@ When evaluated on the test set, the behaviors invert:
 
 ---
 
-## 📈 Question 2 — Option Delta Hedging with Machine Learning & Deep Learning
+## Question 2 — Option Delta Hedging with Machine Learning & Deep Learning
 
 ### 1. Feature Engineering
 The target variable is the quoted option Delta. Inputs consist of:
@@ -175,7 +174,7 @@ Accumulating $\varepsilon_t$ over time measures the portfolio drift.
 
 ---
 
-## 🤖 Generative AI Evaluation & Disclosures
+## Generative AI Evaluation & Disclosures
 
 ### 1. Performance Critique of Colab AI & Copilot
 While GenAI was highly efficient for drafting data loading scripts, scaling boilerplate, and suggesting diagnostic tests (e.g., Lilliefors, Davies-Bouldin), it exhibited critical shortcomings:
@@ -204,8 +203,7 @@ graph TD
 
 ---
 
-## 🎓 Honor Code & References
-This project adheres to the **Università Bocconi Honor Code**.
+## References
 *   Black, F. (1976). *The pricing of commodity contracts*. Journal of Financial Economics.
 *   Hull, J. C. (2022). *Options, Futures, and Other Derivatives* (11th ed.), Pearson.
 *   Lundberg, S. M., & Lee, S.-I. (2017). *A Unified Approach to Interpreting Model Predictions*. Advances in Neural Information Processing Systems (SHAP).
